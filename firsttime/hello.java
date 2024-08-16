@@ -1,5 +1,7 @@
 public class hello {
     public static void main(String[] args) {
-        System.out.println("Dei This is Working Da!");
+        System.out.println(23 + 42 + 55 + 40);
     }
 }
+
+
