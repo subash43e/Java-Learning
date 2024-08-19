@@ -1,9 +1,15 @@
 public class Main {
-  int x = 20;
-  int y = 40;
+  static void output1() {
+    System.out.println("Output - 1");
+  }
 
-  public static void main(String [] args) {
-    Main mynum = new Main();
-    System.out.println(mynum.x + mynum.y);
+  public void output2() {
+    System.out.println("Output - 2");
+  }
+
+  public static void main(String[] args) {
+    output1();
+    Main op2 = new Main();
+    op2.output2();
   }
 }
