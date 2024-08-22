@@ -1,4 +1,3 @@
-
 enum level {
   HIGH,
   MEDIUM,
