@@ -1,11 +1,8 @@
-import java.util.Scanner;
+import java.time.LocalDate;
 
-class Main {
+public class Main {
   public static void main(String[] args) {
-    System.out.println("Enter the userName: ");
-    Scanner myObj = new Scanner(System.in);
-
-    String username = myObj.nextLine();
-    System.out.println(" Username is :" + username);
+    LocalDate myDate = LocalDate.now();
+    System.out.println(myDate);
   }
 }
