@@ -1,22 +1,21 @@
-abstract class Bike {
-    public abstract void r15();
-
-    public void Rtr4v200() {
-        System.out.println("One of the tvs company");
-    }
+interface Animal {
+  public void animalSound(); // interface method (does not have a body)
+  public void sleep(); // interface method (does not have a body)
 }
 
-class FoveriteBikes extends Bike {
-    public void r15() {
-        System.out.println("one of the yamaha bike");
-    }
+class Pig implements Animal {
+  public void animalSound() {
+    System.out.println("The pig says: wee wee");
+  }
+  public void sleep() {
+    System.out.println("Zzz");
+  }
 }
 
-public class Main {
-
-    public static void main(String[] args) {
-        FoveriteBikes myBikes = new FoveriteBikes();
-        myBikes.Rtr4v200();
-    }
-
+class Main {
+  public static void main(String[] args) {
+    Pig myPig = new Pig(); 
+    myPig.animalSound();
+    myPig.sleep();
+  }
 }
