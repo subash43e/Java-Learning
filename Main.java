@@ -1,21 +1,27 @@
-interface Animal {
-  public void animalSound(); // interface method (does not have a body)
-  public void sleep(); // interface method (does not have a body)
+
+enum level {
+  HIGH,
+  MEDIUM,
+  NORMAL
 }
 
-class Pig implements Animal {
-  public void animalSound() {
-    System.out.println("The pig says: wee wee");
-  }
-  public void sleep() {
-    System.out.println("Zzz");
-  }
-}
-
-class Main {
+public class Main {
   public static void main(String[] args) {
-    Pig myPig = new Pig(); 
-    myPig.animalSound();
-    myPig.sleep();
+    level myvar = level.HIGH;
+
+    switch (myvar) {
+      case HIGH:
+        System.out.println("High level");
+        break;
+      case MEDIUM:
+        System.out.println("Medium level");
+        break;
+      case NORMAL:
+        System.out.println("Low level");
+        break;
+
+      default:
+        break;
+    }
   }
 }
