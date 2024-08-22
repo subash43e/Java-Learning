@@ -1,13 +1,11 @@
-enum level {
-  HIGH,
-  MEDIUM,
-  NORMAL
-}
+import java.util.Scanner;
 
-public class Main {
+class Main {
   public static void main(String[] args) {
-    for (level myVar1 : level.values()) {
-      System.out.println(myVar1);
-    }
+    System.out.println("Enter the userName: ");
+    Scanner myObj = new Scanner(System.in);
+
+    String username = myObj.nextLine();
+    System.out.println(" Username is :" + username);
   }
 }
