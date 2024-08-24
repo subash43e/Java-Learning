@@ -7,8 +7,9 @@ public class Main {
     cars.add("volvo");
     cars.add("BMW");
     cars.add("Ford");
-    cars.add(0,"Mazda");
-    
-    System.out.println(cars);
+
+    // access the array element with index.
+
+    System.out.println(cars.get(2));
   }
 }
