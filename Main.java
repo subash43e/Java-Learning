@@ -8,8 +8,8 @@ public class Main {
         fn.put("kks", "klafjal");
         fn.put("klasfal", "kfaslk");
 
-        fn.remove("dd");
-        System.out.println(fn);
-    System.out.println(fn.get("kks"));
+        fn.clear();
+
+    System.out.println(fn);
     }
 }
