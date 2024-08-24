@@ -8,8 +8,8 @@ public class Main {
     cars.add("BMW");
     cars.add("Ford");
 
-//Modifiy the specific index element with set(); method.
-cars.set(1,"bmw");
+    // Remove the specific index element with remove(); method.
+    cars.remove(1);
 
     System.out.println(cars);
   }
