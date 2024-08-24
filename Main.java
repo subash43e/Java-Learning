@@ -1,13 +1,13 @@
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
+import java.util.ArrayList;
 
 public class Main {
-  public static void main(String[] args) {
-    LocalDateTime myDateTime = LocalDateTime.now();
-    System.out.println(myDateTime);
-    DateTimeFormatter myCorrectDateFormat = DateTimeFormatter.ofPattern("dd-MMM-yyyy hh:mm:ss");
-    String formatedDate = myDateTime.format(myCorrectDateFormat);
 
-    System.out.println(formatedDate);
+  public static void main(String[] args) {
+    ArrayList<String> cars = new ArrayList<String>();
+    cars.add("volvo");
+    cars.add("BMW");
+    cars.add("Ford");
+    cars.add("Mazda");
+    System.out.println(cars);
   }
 }
