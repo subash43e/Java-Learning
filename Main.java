@@ -1,17 +1,16 @@
-// java linkedlist begin
-
 import java.util.LinkedList;
+import java.util.Collections;
 
 public class Main {
-  public static void main(String[] args) {
-    LinkedList<String> my = new LinkedList<String>();
-    my.add("why");
-    my.add("lay");
-    my.add("hi");
-    my.add("Demo");
+    public static void main(String[] args) {
+        LinkedList<String> myArray = new LinkedList<String>();
+        myArray.add("demo");
+        myArray.add("run");
+        myArray.add("quit");
+        myArray.add("both");
 
-    System.out.println(my);
-  }
+        Collections.sort(myArray);
+
+        System.out.println(myArray);
+    }
 }
-
-//java linked list is end
