@@ -8,9 +8,8 @@ public class Main {
     cars.add("BMW");
     cars.add("Ford");
 
-    //Remove the all element in the array list.
-    cars.clear();
+    // finding the how many elements in the array.
 
-    System.out.println(cars);
+    System.out.println(cars.size());
   }
 }
