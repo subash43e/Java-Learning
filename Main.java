@@ -9,7 +9,7 @@ public class Main {
         myArray.add("quit");
         myArray.add("both");
 
-        Collections.sort(myArray);
+        Collections.sort(myArray, Collections.reverseOrder());
 
         System.out.println(myArray);
     }
