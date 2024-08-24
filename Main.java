@@ -8,8 +8,8 @@ public class Main {
     cars.add("BMW");
     cars.add("Ford");
 
-    // Remove the specific index element with remove(); method.
-    cars.remove(1);
+    //Remove the all element in the array list.
+    cars.clear();
 
     System.out.println(cars);
   }
