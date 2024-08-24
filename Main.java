@@ -2,12 +2,12 @@ import java.util.ArrayList;
 
 public class Main {
   public static void main(String[] args) {
-    ArrayList<String> myarray = new ArrayList<String>();
-    myarray.add("demo");
-    myarray.add("sdk");
-    myarray.add("funz");
+    ArrayList<Integer> myarray = new ArrayList<Integer>();
+    myarray.add(89);
+    myarray.add(32);
+    myarray.add(323232);
 
-    for (String word : myarray) {
+    for (Integer word : myarray) {
       System.out.println(word);
     }
   }
