@@ -1,20 +1,15 @@
-import java.util.ArrayList;
-import java.util.Collections;
+// java linedlist begin
+
+import java.util.LinkedList;
 
 public class Main {
   public static void main(String[] args) {
-    ArrayList<Integer> myArray = new ArrayList<Integer>();
-  myArray.add(4);
-  myArray.add(5);
-  myArray.add(3);
-  myArray.add(2);
-    Collections.sort(myArray);
+    LinkedList<String> my = new LinkedList<String>();
+    my.add("why");
+    my.add("lay");
+    my.add("hi");
+    my.add("Demo");
 
-    for (int d : myArray) {
-      System.out.println(d);
-    }
+    System.out.println(my);
   }
 }
-
-
-// array list completed
