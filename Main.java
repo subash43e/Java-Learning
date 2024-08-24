@@ -6,8 +6,9 @@ public class Main {
     myarray.add("demo");
     myarray.add("sdk");
     myarray.add("funz");
-    for (int i = 0; i < myarray.size(); i++) {
-      System.out.println(myarray.get(i));
+
+    for (String word : myarray) {
+      System.out.println(word);
     }
   }
 }
