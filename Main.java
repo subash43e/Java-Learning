@@ -8,8 +8,9 @@ public class Main {
     cars.add("BMW");
     cars.add("Ford");
 
-    // access the array element with index.
+//Modifiy the specific index element with set(); method.
+cars.set(1,"bmw");
 
-    System.out.println(cars.get(2));
+    System.out.println(cars);
   }
 }
