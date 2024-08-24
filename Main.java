@@ -1,4 +1,4 @@
-// java linedlist begin
+// java linkedlist begin
 
 import java.util.LinkedList;
 
@@ -13,3 +13,5 @@ public class Main {
     System.out.println(my);
   }
 }
+
+//java linked list is end
