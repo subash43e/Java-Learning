@@ -1,16 +1,15 @@
-import java.util.LinkedList;
-import java.util.Collections;
+import java.util.HashMap;
 
 public class Main {
     public static void main(String[] args) {
-        LinkedList<String> myArray = new LinkedList<String>();
-        myArray.add("demo");
-        myArray.add("run");
-        myArray.add("quit");
-        myArray.add("both");
+        HashMap<String,String> fn = new HashMap<String,String> ();
+        fn.put("dd", "dd");
+        fn.put("kjk", "kjskfk");
+        fn.put("kks", "klafjal");
+        fn.put("klasfal", "kfaslk");
 
-        Collections.sort(myArray, Collections.reverseOrder());
-
-        System.out.println(myArray);
+        fn.remove("dd");
+        System.out.println(fn);
+    System.out.println(fn.get("kks"));
     }
 }
