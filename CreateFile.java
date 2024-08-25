@@ -1,17 +1,19 @@
 import java.io.File;
-import java.io.IOException;
-import java.io.FileWriter;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
 
 public class CreateFile {
   public static void main(String[] args) {
- 
-    // Writing file
+
     try {
-      FileWriter myWriter = new FileWriter("filetexts.txt");
-      myWriter.write("I love to write doc on java");
-      myWriter.close();
-      System.out.println("Successfully wrote to the file.");
-    } catch (IOException e) {
+      File myObj = new File("filetext.txt");
+      Scanner myRead = new Scanner(myObj);
+      while (myRead.hasNextLine()) {
+        String data = myRead.nextLine();
+        System.out.println(data);
+      }
+      myRead.close();
+    } catch (FileNotFoundException e) {
       System.out.println("An error occurred");
       e.printStackTrace();
     }
