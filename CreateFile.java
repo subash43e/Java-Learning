@@ -1,17 +1,18 @@
 import java.io.File;
 import java.io.IOException;
+import java.io.FileWriter;
 
 public class CreateFile {
   public static void main(String[] args) {
+ 
+    // Writing file
     try {
-      File myobj = new File("filetext.txt");
-      if (myobj.createNewFile()) {
-        System.out.println("File created: " + myobj.getName());
-      } else {
-        System.out.println("File already exists.");
-      }
+      FileWriter myWriter = new FileWriter("filetexts.txt");
+      myWriter.write("I love to write doc on java");
+      myWriter.close();
+      System.out.println("Successfully wrote to the file.");
     } catch (IOException e) {
-      System.out.println("An error occurred.");
+      System.out.println("An error occurred");
       e.printStackTrace();
     }
   }
