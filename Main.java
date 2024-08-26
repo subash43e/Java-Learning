@@ -1,10 +1,19 @@
 public class Main {
     public static void main(String[] args) {
-        String myStr = "Hello";
-        char[] myArray = myStr.toCharArray();
+        // How to find Average of the Average of Array Elements
 
-        for (char letter : myArray) {
-            System.out.println(letter);
+        int[] tokens = { 2, 3, 11, 6, 7, 8, 9 };
+        float avg, sum = 0;
+
+        int length = tokens.length;
+
+        for (int token : tokens) {
+            sum += token;
         }
+        ;
+
+        avg = sum / length;
+
+        System.out.println("Total average token number :" + avg);
     }
 }
