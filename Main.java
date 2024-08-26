@@ -1,11 +1,10 @@
 public class Main {
     public static void main(String[] args) {
-        int[] myArray = { 1, 2, 5, 6, 2, 8, 3 };
-        int sum = 0;
-        int i;
-        for (i = 0; i < myArray.length; i++) {
-            sum += myArray[i];
+        String myStr = "Hello";
+        char[] myArray = myStr.toCharArray();
+
+        for (char letter : myArray) {
+            System.out.println(letter);
         }
-        System.out.println("The sum is " + sum);
     }
 }
