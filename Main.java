@@ -1,19 +1,12 @@
+import java.util.Arrays;
+
 public class Main {
     public static void main(String[] args) {
-        // How to find Average of the Average of Array Elements
-
-        int[] tokens = { 2, 3, 11, 6, 7, 8, 9 };
-        float avg, sum = 0;
-
-        int length = tokens.length;
-
-        for (int token : tokens) {
-            sum += token;
+        String[] cars = { "Volvo", "BMW", "Tesla", "Ford", "Fiat", "Mazda", "Audi" };
+        //Array is class Name.
+        Arrays.sort(cars);
+        for(String car : cars){
+            System.out.println(car);
         }
-        ;
-
-        avg = sum / length;
-
-        System.out.println("Total average token number :" + avg);
     }
 }
