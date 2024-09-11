@@ -1,21 +1,39 @@
-
 public class Main {
+  public static void main(String[] args) {
+    int[] array = {4,2,1,3,5,6,8,7};
 
-    static int n1 = 0, n2 = 1, n3;
+    quickSort(array, 0, array.length - 1);
 
-    static void fibonaci(int count) {
-        if (count > 0) {
-            n3 = n1 + n2;
-            n1 = n2;
-            n2 = n3;
-            System.out.println(" " + n3);
-            fibonaci(count - 1);
-        }
-    }
+    for (int i : array) {
+      System.out.println(i + " "); }
+  }
+  private static void quickSort(int[] array, int start , int end) {
 
-    public static void main(String[] args) {
-        int count = 10;
-        System.out.println(n1 + " " + n2);
-        fibonaci(count - 2);
-    }
+    if(end <= start ) return; // base case
+    int pivot = partition(array, start, end);
+    quickSort(array, start, pivot -1);
+    quickSort(array, pivot + 1, end);
+
+  }
+
+  private static int partition(int[] array, int start , int end) {
+    int pivot = array[end];
+    int i = start - 1;
+    for (int j = start; j <= end - 1 ; j++){
+      if (array[j] < pivot) {
+        i++;
+        int temp = array[i];
+        array[i] = array[j];
+        array[j]= temp;
+      }
+
+    } 
+        i++;
+        int temp = array[i];
+        array[i] = array[end];
+        array[end]= temp;
+
+
+    return i;
+  }
 }
