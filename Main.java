@@ -1,39 +1,54 @@
 public class Main {
+
   public static void main(String[] args) {
-    int[] array = {4,2,1,3,5,6,8,7};
-
-    quickSort(array, 0, array.length - 1);
-
-    for (int i : array) {
-      System.out.println(i + " "); }
-  }
-  private static void quickSort(int[] array, int start , int end) {
-
-    if(end <= start ) return; // base case
-    int pivot = partition(array, start, end);
-    quickSort(array, start, pivot -1);
-    quickSort(array, pivot + 1, end);
-
+    int[] array = { 8, 2, 5, 3, 4, 7, 6, 1 };
+    mergeSort(array);
+    for (int i = 0; i < array.length; i++) {
+      System.out.print(array[i] + " ");
+    }
   }
 
-  private static int partition(int[] array, int start , int end) {
-    int pivot = array[end];
-    int i = start - 1;
-    for (int j = start; j <= end - 1 ; j++){
-      if (array[j] < pivot) {
-        i++;
-        int temp = array[i];
-        array[i] = array[j];
-        array[j]= temp;
+  private static void mergeSort(int[] array) {
+    int length = array.length;
+    if (length <= 1)
+      return; // base case
+
+    int middle = length / 2;
+    int[] leftArray = new int[middle];
+    int[] rightArray = new int[length - middle];
+
+    // Divide the array into two halves
+    for (int i = 0; i < length; i++) {
+      if (i < middle) {
+        leftArray[i] = array[i];
+      } else {
+        rightArray[i - middle] = array[i];
       }
+    }
 
-    } 
-        i++;
-        int temp = array[i];
-        array[i] = array[end];
-        array[end]= temp;
+    mergeSort(leftArray);
+    mergeSort(rightArray);
+    merge(leftArray, rightArray, array);
+  }
 
+  private static void merge(int[] leftArray, int[] rightArray, int[] array) {
+    int i = 0, l = 0, r = 0; // indices
 
-    return i;
+    // Merge the sorted arrays
+    while (l < leftArray.length && r < rightArray.length) {
+      if (leftArray[l] <= rightArray[r]) {
+        array[i++] = leftArray[l++];
+      } else {
+        array[i++] = rightArray[r++];
+      }
+    }
+
+    // Copy any remaining elements from the left or right arrays
+    while (l < leftArray.length) {
+      array[i++] = leftArray[l++];
+    }
+    while (r < rightArray.length) {
+      array[i++] = rightArray[r++];
+    }
   }
 }
