@@ -5,8 +5,7 @@ public class Main {
 
   public static void main(String[] args) {
     int[] arr = { 2, 3, 6, 8, 9, 13, 20 };
-
-    System.out.println(binarySearch(arr, 7));
+    System.out.println(binarySearch(arr, 13));
   }
 
   private static int binarySearch(int[] array, int target) {
@@ -17,7 +16,7 @@ public class Main {
 
     while (low <= high) {
 
-      int middle = low + (high - low) / 2;
+      int middle = (high + low) / 2;
 
       int value = array[middle];
 
