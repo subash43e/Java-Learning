@@ -1,54 +1,44 @@
+/**
+ * Main
+ */
 public class Main {
 
   public static void main(String[] args) {
-    int[] array = { 8, 2, 5, 3, 4, 7, 6, 1 };
-    mergeSort(array);
-    for (int i = 0; i < array.length; i++) {
-      System.out.print(array[i] + " ");
-    }
+    int[] arr = { 2, 3, 6, 8, 9, 13, 20 };
+
+    System.out.println(binarySearch(arr, 7));
   }
 
-  private static void mergeSort(int[] array) {
-    int length = array.length;
-    if (length <= 1)
-      return; // base case
+  private static int binarySearch(int[] array, int target) {
 
-    int middle = length / 2;
-    int[] leftArray = new int[middle];
-    int[] rightArray = new int[length - middle];
+    int low = 0;
 
-    // Divide the array into two halves
-    for (int i = 0; i < length; i++) {
-      if (i < middle) {
-        leftArray[i] = array[i];
+    int high = array.length - 1;
+
+    while (low <= high) {
+
+      int middle = low + (high - low) / 2;
+
+      int value = array[middle];
+
+      if (value < target) {
+
+        low = middle + 1; // move the low pointer to the right half
+
+      } else if (value > target) {
+
+        high = middle - 1; // move the high pointer to the left half
+
       } else {
-        rightArray[i - middle] = array[i];
+
+        return middle; // target found
+
       }
+
     }
 
-    mergeSort(leftArray);
-    mergeSort(rightArray);
-    merge(leftArray, rightArray, array);
+    return -1; // target not found
+
   }
 
-  private static void merge(int[] leftArray, int[] rightArray, int[] array) {
-    int i = 0, l = 0, r = 0; // indices
-
-    // Merge the sorted arrays
-    while (l < leftArray.length && r < rightArray.length) {
-      if (leftArray[l] <= rightArray[r]) {
-        array[i++] = leftArray[l++];
-      } else {
-        array[i++] = rightArray[r++];
-      }
-    }
-
-    // Copy any remaining elements from the left or right arrays
-    while (l < leftArray.length) {
-      array[i++] = leftArray[l++];
-    }
-    while (r < rightArray.length) {
-      array[i++] = rightArray[r++];
-    }
-  }
 }
